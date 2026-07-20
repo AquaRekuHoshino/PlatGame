@@ -1,31 +1,35 @@
 #include <iostream>
 #include <String.h>
 #include <raylib.h>
+#include "src/Player/player.h"
 
 
-
-std::string update()
+player player;
+void update()
 {
-    std::string text = "Hola xd este texto es retornado por una \nfuncion de raylib";
-    return text;
+
+    player.updatePlayer();
+
 }
 
 void render()
 {
-    BeginDrawing();
+
     ClearBackground(RAYWHITE);
-    EndDrawing();
+    player.RenderPlayer();
+
 }
 
 int main() {
-    InitWindow(500,500,"PlatGame InDev 0.1");
+    InitWindow(1000,600,"PlatGame InDev 0.1");
     SetTargetFPS(60);
     while (!WindowShouldClose())
     {
 
         update();
+        BeginDrawing();
         render();
-
+        EndDrawing();
     }
 
     CloseWindow();
