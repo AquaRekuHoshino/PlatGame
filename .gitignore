@@ -15,7 +15,8 @@ CMakeUserPresets.json
 # .idea/modules
 # *.iml
 # *.ipr
-
+.idea/
+examples/
 # CMake
 cmake-build-*/
 
